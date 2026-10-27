@@ -1,58 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>THE LAST — Fishing Safety Lab</title>
-  <meta name="description" content="A safe phishing-awareness simulator for learning how suspicious links work without collecting credentials.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE LAST — Social Media Security Lab</title>
+<meta name="description" content="Safe social-media phishing awareness simulator. No real credentials are collected or stored.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg"></div>
-  <header class="nav">
-    <a class="brand" href="#top"><span>THE</span> LAST</a>
-    <nav><a href="#lab">Link Lab</a><a href="#signals">Red Flags</a><a href="#about">Safety</a></nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="badge">SECURITY AWARENESS • SAFE SIMULATOR</div>
-      <h1>THE LAST<br><em>FISHING</em> LAB</h1>
-      <p>Learn to spot suspicious links before they become a real problem. This demo never asks for or stores passwords, tokens, or personal information.</p>
-      <div class="actions"><a class="btn primary" href="#lab">START THE LAB</a><a class="btn" href="#signals">LEARN THE SIGNS</a></div>
-    </section>
-
-    <section id="lab" class="section">
-      <div class="section-head"><span>01</span><div><h2>LINK LAB</h2><p>Inspect a simulated message and decide whether the link is safe.</p></div></div>
-      <div class="lab-card">
-        <div class="mail-top"><span>●</span><span>Security Notification</span><small>SIMULATION</small></div>
-        <div class="message">
-          <p><b>From:</b> account-alert@example.test</p>
-          <p><b>Subject:</b> Unusual sign-in detected</p>
-          <p>Your account was accessed from a new device. Review the activity using the button below.</p>
-          <button class="fake-link" id="inspectBtn">Review activity →</button>
-        </div>
-        <div id="result" class="result" hidden></div>
-      </div>
-    </section>
-
-    <section id="signals" class="section">
-      <div class="section-head"><span>02</span><div><h2>RED FLAGS</h2><p>Use these checks whenever a message pushes you toward a link.</p></div></div>
-      <div class="grid">
-        <article><b>01</b><h3>Check the domain</h3><p>Look for misspellings, strange subdomains, or domains that do not belong to the claimed service.</p></article>
-        <article><b>02</b><h3>Urgency is a signal</h3><p>Threats like “act now” or “your account will close” are common social-engineering tactics.</p></article>
-        <article><b>03</b><h3>Verify independently</h3><p>Open the official app or type the known website yourself instead of trusting the message link.</p></article>
-        <article><b>04</b><h3>Never enter secrets</h3><p>Never submit passwords, OTPs, recovery codes, or payment details to an unverified page.</p></article>
-      </div>
-    </section>
-
-    <section id="about" class="section safety">
-      <div><div class="badge">SAFE BY DESIGN</div><h2>TRAIN. VERIFY. PROTECT.</h2><p>This project is intentionally built as an awareness simulator. It does not imitate a real service for credential capture, does not store submissions, and does not create deceptive login pages.</p></div>
-      <div class="terminal"><span>$</span> link-check --mode=safe<br><i>simulation enabled</i><br><span>$</span> credentials --collect=false<br><i>protected ✓</i></div>
-    </section>
-  </main>
-
-  <footer><span>THE LAST • Fishing Safety Lab</span><span>Educational simulation only</span></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="bg"></div>
+<header class="nav"><a class="brand" href="#top"><span>THE</span> LAST</a><nav><a href="#lab">Lab</a><a href="#signals">Red Flags</a><a href="#quiz">Quiz</a></nav></header>
+<main id="top">
+<section class="hero"><div class="badge">SOCIAL SECURITY • SAFE TRAINING</div><h1>THE LAST<br><em>FISHING</em> LAB</h1><p>Practice spotting a fake social-media login without exposing a real password. Everything below is a controlled simulation.</p><div class="actions"><a class="btn primary" href="#lab">START TRAINING</a><a class="btn" href="#quiz">TAKE QUIZ</a></div></section>
+<section id="lab" class="section"><div class="section-head"><span>01</span><div><h2>LOGIN TRAP SIMULATION</h2><p>This looks like a social-media login flow, but it is deliberately isolated for training.</p></div></div>
+<div class="sim-wrap">
+<div class="social-card"><div class="social-brand"><span class="camera">◎</span> Social<span>gram</span><small>TRAINING</small></div><div class="lock">🔒</div><h3>Sign in to continue</h3><p class="muted">This is a simulated login screen.</p>
+<label>Username / email<input id="demoUser" autocomplete="off" placeholder="training@example.test"></label>
+<label>Password<input id="demoPass" type="password" autocomplete="off" placeholder="Use TEST_ONLY_123"></label>
+<button class="login-btn" id="demoLogin">Sign in</button><p class="demo-note">Use only fictional training data. Never enter a real password.</p></div>
+<div id="result" class="result" hidden></div>
+</div></section>
+<section id="signals" class="section"><div class="section-head"><span>02</span><div><h2>RED FLAGS</h2><p>Four checks that can stop a phishing attempt.</p></div></div><div class="grid"><article><b>01</b><h3>Check the domain</h3><p>Inspect the actual domain before entering anything.</p></article><article><b>02</b><h3>Reject urgency</h3><p>“Verify now” and account-threat messages are classic pressure tactics.</p></article><article><b>03</b><h3>Open the official app</h3><p>Verify account alerts directly in the official service instead of following a message link.</p></article><article><b>04</b><h3>Protect secrets</h3><p>Passwords, OTPs and recovery codes should never be entered into an unverified page.</p></article></div></section>
+<section id="quiz" class="section quiz"><div class="section-head"><span>03</span><div><h2>SPOT THE PHISH</h2><p>Choose the safest action.</p></div></div><div class="quiz-card"><p><b>Message:</b> “Your account will be locked in 10 minutes. Sign in here immediately.”</p><div class="quiz-actions"><button data-answer="bad">Click the message link</button><button data-answer="good">Open the official app independently</button></div><div id="quizResult"></div></div></section>
+<section class="section safety"><div><div class="badge">SAFE BY DESIGN</div><h2>TRAIN. VERIFY. PROTECT.</h2><p>This simulator never sends, stores, displays, or logs the password entered into the training form. It is not an Instagram login page and is not connected to Instagram.</p></div><div class="terminal"><span>$</span> simulator --mode=safe<br><i>credentials.collect = false</i><br><span>$</span> external-auth --enabled=false<br><i>training isolated ✓</i></div></section>
+</main><footer><span>THE LAST • Social Security Lab</span><span>Educational simulation only</span></footer>
+<script src="script.js"></script>
+</body></html>
