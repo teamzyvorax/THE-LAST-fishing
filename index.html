@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THE LAST — Fishing Safety Lab</title>
+  <meta name="description" content="A safe phishing-awareness simulator for learning how suspicious links work without collecting credentials.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="nav">
+    <a class="brand" href="#top"><span>THE</span> LAST</a>
+    <nav><a href="#lab">Link Lab</a><a href="#signals">Red Flags</a><a href="#about">Safety</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="badge">SECURITY AWARENESS • SAFE SIMULATOR</div>
+      <h1>THE LAST<br><em>FISHING</em> LAB</h1>
+      <p>Learn to spot suspicious links before they become a real problem. This demo never asks for or stores passwords, tokens, or personal information.</p>
+      <div class="actions"><a class="btn primary" href="#lab">START THE LAB</a><a class="btn" href="#signals">LEARN THE SIGNS</a></div>
+    </section>
+
+    <section id="lab" class="section">
+      <div class="section-head"><span>01</span><div><h2>LINK LAB</h2><p>Inspect a simulated message and decide whether the link is safe.</p></div></div>
+      <div class="lab-card">
+        <div class="mail-top"><span>●</span><span>Security Notification</span><small>SIMULATION</small></div>
+        <div class="message">
+          <p><b>From:</b> account-alert@example.test</p>
+          <p><b>Subject:</b> Unusual sign-in detected</p>
+          <p>Your account was accessed from a new device. Review the activity using the button below.</p>
+          <button class="fake-link" id="inspectBtn">Review activity →</button>
+        </div>
+        <div id="result" class="result" hidden></div>
+      </div>
+    </section>
+
+    <section id="signals" class="section">
+      <div class="section-head"><span>02</span><div><h2>RED FLAGS</h2><p>Use these checks whenever a message pushes you toward a link.</p></div></div>
+      <div class="grid">
+        <article><b>01</b><h3>Check the domain</h3><p>Look for misspellings, strange subdomains, or domains that do not belong to the claimed service.</p></article>
+        <article><b>02</b><h3>Urgency is a signal</h3><p>Threats like “act now” or “your account will close” are common social-engineering tactics.</p></article>
+        <article><b>03</b><h3>Verify independently</h3><p>Open the official app or type the known website yourself instead of trusting the message link.</p></article>
+        <article><b>04</b><h3>Never enter secrets</h3><p>Never submit passwords, OTPs, recovery codes, or payment details to an unverified page.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="section safety">
+      <div><div class="badge">SAFE BY DESIGN</div><h2>TRAIN. VERIFY. PROTECT.</h2><p>This project is intentionally built as an awareness simulator. It does not imitate a real service for credential capture, does not store submissions, and does not create deceptive login pages.</p></div>
+      <div class="terminal"><span>$</span> link-check --mode=safe<br><i>simulation enabled</i><br><span>$</span> credentials --collect=false<br><i>protected ✓</i></div>
+    </section>
+  </main>
+
+  <footer><span>THE LAST • Fishing Safety Lab</span><span>Educational simulation only</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
